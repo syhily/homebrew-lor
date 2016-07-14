@@ -10,8 +10,6 @@ class Lor < Formula
     url "https://github.com/sumory/lor.git", :branch => "master"
   end
 
-  option "HEAD", "Install the head version"
-
   depends_on "openssl"
   depends_on "ossp-uuid"
 
