@@ -17,6 +17,7 @@ class Lor < Formula
     # Add path for lord
     inreplace "bin/lord" do |file|
       file.gsub! ".. package.path", ".. '#{prefix}/?.lua;#{prefix}/?/init.lua;'"
+      file.gsub! "/usr/local/lor", "#{prefix}"
     end
 
     prefix.install Dir["./*"]
