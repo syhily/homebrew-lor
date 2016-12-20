@@ -14,12 +14,13 @@ class Lor < Formula
   depends_on "ossp-uuid"
 
   def install
-    # Add path for lord
-    inreplace "bin/lord" do |file|
-      file.gsub! ".. package.path", ".. '#{prefix}/?.lua;#{prefix}/?/init.lua;'"
-      file.gsub! "/usr/local/lor", "#{prefix}"
-    end
+    # # Add path for lord
+    # inreplace "bin/lord" do |file|
+    #   file.gsub! ".. package.path", ".. '#{prefix}/?.lua;#{prefix}/?/init.lua;'"
+    #   file.gsub! "/usr/local/lor", "#{prefix}"
+    # end
 
-    prefix.install Dir["./*"]
+    # prefix.install Dir["./*"]
+    system "sh", "install.sh", "#{prefix}"
   end
 end
