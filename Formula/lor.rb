@@ -21,6 +21,7 @@ class Lor < Formula
     # end
 
     # prefix.install Dir["./*"]
-    system "sh", "install.sh", "#{prefix}"
+    ENV["LOR_HOME"] = "#{prefix}"
+    system "make", "install"
   end
 end
