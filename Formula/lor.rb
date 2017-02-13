@@ -3,7 +3,7 @@ class Lor < Formula
   desc "A fast, minimalist web framework for lua based on OpenResty"
 
   stable do
-    url "https://github.com/sumory/lor.git", :tag => "v0.2.6"
+    url "https://github.com/sumory/lor.git", :tag => "v0.3.0"
   end
 
   head do
